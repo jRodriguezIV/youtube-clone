@@ -1,9 +1,7 @@
-
-
 export default function Home() {
 
 
-    return(
+    return (
         <div>
             <p>Testing Home</p>
         </div>
