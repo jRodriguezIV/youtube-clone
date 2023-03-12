@@ -1,3 +1,21 @@
 .header-wrapper {
 background-color: red;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* * lets use material ui icons looks nice - for the menu button, upload, and search btn 
+ installed material ui in event we want to use for styling */
+
+/* 3 diff sections of header. left --> menu button and youtube logo
+/* middle --> search bar nd microphone icon
+/* /* right --> 3 icons w/ the Avatar icon  */
