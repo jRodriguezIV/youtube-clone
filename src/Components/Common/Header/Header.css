@@ -1,21 +1,69 @@
 .header-wrapper {
-background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.header-logo {
+    height: 60px;
+    width: 100px;
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-middle {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    border: 1px solid lightgrey;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.SearchInput {
+    flex: 1;
+    border: none;
+    height: 25px !important;
+    padding-left: 10px;
+    font-size: 16px;
+}.header-input {
+    display: flex;
+    align-items: center;
+    width: 45%;
 }
 
 
+.header-right {
+    display: flex;
+    align-self: center;
+}
 
+.header-searchBtn {
+    width: 50px !important;
+    background-color: #fafafa;
+    border-left: 1px solid lightgrey;
+    color: gray;
+}
 
-
-
-
-
-
-
+.header-icons {
+    margin-right: 20px;
+    color: rgb(83, 83, 83) !important;
+}
 
 
 /* * lets use material ui icons looks nice - for the menu button, upload, and search btn 
  installed material ui in event we want to use for styling */
 
 /* 3 diff sections of header. left --> menu button and youtube logo
-/* middle --> search bar nd microphone icon
+/* middle --> search bar and microphone icon
 /* /* right --> 3 icons w/ the Avatar icon  */
