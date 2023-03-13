@@ -21,7 +21,7 @@ const [searchState, setSearchState] = useState('kittens')
       <Routes>
         <Route path='/' element={<Home setSearchState={setSearchState} searchState={searchState}/>} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
     </>
   );
