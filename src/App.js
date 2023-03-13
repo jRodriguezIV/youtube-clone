@@ -17,7 +17,7 @@ const [searchState, setSearchState] = useState('kittens')
   return (
     <>
     <Router>
-    <Header />
+    <Header searchState={searchState} setSearchState={setSearchState}/>
       <Routes>
         <Route path='/' element={<Home setSearchState={setSearchState} searchState={searchState}/>} />
       </Routes>

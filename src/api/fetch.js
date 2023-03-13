@@ -13,7 +13,7 @@ const MAX_RESULTS = "&max_results=8";
 // HTTPS+API_KEY+SEARCH_TERM
 
 export function searchByTerm() {
-  return fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyA0iS7HYYOs0RoF2MWsmubzAvyxJGg2MDs&q=bats&part=snippet&max_results=2').then((response) => {
+  return fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyDreUDK_wC1euAK2AT2SA9-iQpgGz2wV0k&q=bats&part=snippet&max_results=12').then((response) => {
     return response.json();
   });
 }

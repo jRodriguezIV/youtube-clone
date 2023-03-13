@@ -6,6 +6,7 @@ import './Home.css'
 export default function Home({ searchState, setSearchState}) {
     const [videoList, setVideoList] = useState([])
 
+
     useEffect(() => {
         searchByTerm(searchState).then((response) => {
             setVideoList(response.items)
