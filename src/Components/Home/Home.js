@@ -22,7 +22,7 @@ export default function Home({ searchState, setSearchState}) {
 
                 return (
                     <div className="thumbnail">
-                    <img style={{width: 200, heigth: 240}} src={video.snippet.thumbnails.medium.url} />
+                    <img style={{width: 240, heigth: 240}} src={video.snippet.thumbnails.medium.url} />
                     <h4>{video.snippet.title}</h4>
                     </div>
                 )}
