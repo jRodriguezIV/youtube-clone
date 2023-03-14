@@ -4,11 +4,10 @@ Welcome to our Youtube Clone! 😃
 
 ## Contributors
 
-| Dev Team | 
-| :--------------: 
+| Dev Team |
+| :--------------:
 | [**Joseph R.**](https://github.com/jRodriguezIV)|
-| [**Shareeka E.**](https://github.com/shaketastic)| 
-
+| [**Shareeka E.**](https://github.com/shaketastic)|
 
 ## Objectives
 
@@ -17,15 +16,20 @@ Welcome to our Youtube Clone! 😃
 - Integrate Youtube API
 - Create a responsive design
 
-
-
 ## Installation
 
-Install this repo with npm
+To get started, clone the repository and install the dependencies:
 
 ```bash
-  npm install 
+git clone https://github.com/jRodriguezIV/youtube-clone.git
+cd youtube-clone
+npm install
 ```
+## Usage
 
+To start the development server, run the following command:
 
-
+```bash
+npm start
+```
+This will start the app on [http://localhost:3000](http://localhost:3000).
