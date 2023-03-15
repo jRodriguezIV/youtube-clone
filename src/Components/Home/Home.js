@@ -32,7 +32,6 @@ export default function Home({ searchState, setSearchState}) {
                 )}
             )) : ("")
             }
-            {/* <img style={{width: 160, heigth: 200}} src= "https://i.ytimg.com/vi/QYh6mYIJG2Y/mqdefault.jpg" /> */}
         </div>
     )
 }
