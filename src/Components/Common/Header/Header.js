@@ -17,7 +17,7 @@ export default function Header () {
         setSearchState(e.target.value);
         // searchByTerm();
     }
-    // testing the pull request
+    // testing the pull request -- git reset --merge 
  
     
 
