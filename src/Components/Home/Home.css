@@ -18,3 +18,8 @@
 .thumbnail img {
     border-radius: 15px;
 }
+
+.thumbnail img:hover {
+    transform: scale(1.25);
+    transition-delay: 250ms;
+}
