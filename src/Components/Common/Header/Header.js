@@ -7,22 +7,33 @@ import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
 import MicIcon from '@mui/icons-material/Mic';
+import { useState } from 'react';
 
 
 export default function Header () {
+    const [searchState, setSearchState] = useState('');
+    
+    function handleChange(e) {
+        setSearchState(e.target.value);
+        // searchByTerm();
+    }
+
+    
 
     return (
         <div className='header-wrapper'>
         <div className='header-left'>
-            {/* <h1>Header</h1> */}
 
             <MenuIcon />
             <img className='header-logo' src={ytLogo} alt='youtube-logo' />
         </div>
         <div className='header-input'>
             <div className='header-middle'>
-            <input className='SearchInput' placeholder='Search' type='text' />
-            <SearchIcon className='header-searchBtn'/>
+            {/* onChange={(e)=>setSearchState(e.target.value)} value={searchState} */}
+            <input className='SearchInput' placeholder='Search' type='text' value={searchState} onChange={handleChange} />
+             
+
+            <SearchIcon className='header-searchBtn' />
             </div>
             <MicIcon className='header-icons'/>
         </div>

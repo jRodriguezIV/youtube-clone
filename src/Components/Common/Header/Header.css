@@ -36,7 +36,12 @@
     height: 25px !important;
     padding-left: 10px;
     font-size: 16px;
-}.header-input {
+}
+.SearchInput:focus {
+    outline: none;
+}
+
+.header-input {
     display: flex;
     align-items: center;
     width: 45%;
