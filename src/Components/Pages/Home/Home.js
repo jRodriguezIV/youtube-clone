@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react"
-import { useParams, Link } from "react-router-dom"
-import { searchByTerm } from "../../api/fetch"
+import { Link } from "react-router-dom"
+import { searchByTerm } from "../../../api/fetch"
 
 import './Home.css'
 
 
-export default function Home({ searchState, setSearchState}) {
+export default function Home({ searchState }) {
     const [videoList, setVideoList] = useState([])
 
-    let {videoId} = useParams()
-    console.log(videoId)
+
 
     useEffect(() => {
         searchByTerm(searchState).then((response) => {
@@ -26,7 +25,7 @@ export default function Home({ searchState, setSearchState}) {
 
                 return (
                     <div className="thumbnail">
-                   <Link to={`/${video.id.videoId}`}><img style={{width: 240, heigth: 240}} src={video.snippet.thumbnails.medium.url} /></Link> 
+                   <Link to={`/${video.id.videoId}`}><img style={{width: 314, heigth: 240}} src={video.snippet.thumbnails.medium.url} alt={'Youtube Thumbnail'} /></Link> 
                     <h4>{video.snippet.title}</h4>
                     </div>
                 )}

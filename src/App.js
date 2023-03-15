@@ -2,10 +2,9 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import Footer from './Components/Common/Footer/Footer';
 import Header from './Components/Common/Header/Header';
-import Home from './Components/Home/Home';
-import { searchByTerm } from './api/fetch';
+import Home from './Components/Pages/Home/Home';
 import { useState } from 'react';
-import Video from './Components/Common/Video/Video';
+import Video from './Components/Pages/Video/Video';
 
 
 function App() {
