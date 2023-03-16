@@ -10,14 +10,17 @@ import MicIcon from '@mui/icons-material/Mic';
 import { useState } from 'react';
 
 
-export default function Header () {
-    const [searchState, setSearchState] = useState('');
-    
-    function handleChange(e) {
+export default function Header ({searchState, setSearchState}) {
+    // const [searchState, setSearchState] = useState('');
+    //figure out why state intializes to 'kittens' on load...text changes with user  input
+    //still need to add onSubmit as per readme?
+    const [searchInput, setSearchInput] = useState('');
+
+    const handleChange = (e) => {
+        e.preventDefault();
         setSearchState(e.target.value);
-        // searchByTerm();
-    }
-    // testing the pull request -- git reset --merge 
+        setSearchInput();
+    };
  
     
 
@@ -30,10 +33,7 @@ export default function Header () {
         </div>
         <div className='header-input'>
             <div className='header-middle'>
-            {/* onChange={(e)=>setSearchState(e.target.value)} value={searchState} */}
-            <input className='SearchInput' placeholder='Search' type='text' value={searchState} onChange={handleChange} />
-             
-
+            <input className='SearchInput' placeholder='Search' type='text' value={searchInput} onChange={handleChange} />
             <SearchIcon className='header-searchBtn' />
             </div>
             <MicIcon className='header-icons'/>

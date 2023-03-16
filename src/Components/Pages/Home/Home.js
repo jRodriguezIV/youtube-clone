@@ -6,7 +6,7 @@ import './Home.css'
 
 
 export default function Home({ searchState }) {
-    const [videoList, setVideoList] = useState([])
+    const [videoList, setVideoList] = useState([]);
 
 
 
