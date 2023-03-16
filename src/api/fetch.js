@@ -2,7 +2,7 @@
 // const URL = process.env.{api_variable_name}
 
 const URL = "https://www.googleapis.com/youtube/v3/search";
-const API_KEY = "?key=AIzaSyDgf-3gXeiyEdH7VxEHlzZvhUMYkF3hacU";
+const API_KEY = "?key=AIzaSyBxrgz_dJZpiZVLWipJPI9-QIvPd-2W7RE";
 const PART = "&part=snippet";
 const MAX_RESULTS = "&max_results=12";
 
