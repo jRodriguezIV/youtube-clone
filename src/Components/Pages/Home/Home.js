@@ -7,7 +7,7 @@ import './Home.css'
 
 export default function Home({ searchState }) {
     const [videoList, setVideoList] = useState([]);
-
+    
 
 
     useEffect(() => {

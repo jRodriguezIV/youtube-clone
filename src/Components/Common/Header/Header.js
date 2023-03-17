@@ -21,21 +21,24 @@ export default function Header ({searchState, setSearchState}) {
         setSearchState(e.target.value);
         setSearchInput();
     };
- 
-    
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
 
     return (
         <div className='header-wrapper'>
         <div className='header-left'>
-
             <MenuIcon />
             <img className='header-logo' src={ytLogo} alt='youtube-logo' />
         </div>
         <div className='header-input'>
             <div className='header-middle'>
             <input className='SearchInput' placeholder='Search' type='text' value={searchInput} onChange={handleChange} />
-            <SearchIcon className='header-searchBtn' />
+            <SearchIcon className='header-searchBtn' onSubmit={handleSubmit} />
             </div>
+        
             <MicIcon className='header-icons'/>
         </div>
         <div className='header-right'>

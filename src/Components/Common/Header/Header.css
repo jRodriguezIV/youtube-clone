@@ -10,10 +10,11 @@
 }
 
 .header-logo {
-    height: 60px;
-    width: 100px;
+    height: 80px;
+    width: 180px;
     object-fit: contain;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .header-left {
@@ -40,9 +41,9 @@
     overflow-y: auto;
 } */
 
-.header-middle::-webkit-scrollbar {
+/* .header-middle::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .SearchInput {
     flex: 1;
@@ -71,12 +72,14 @@
     width: 50px !important;
     background-color: #fafafa;
     border-left: 1px solid lightgrey;
+    cursor: pointer;
     color: gray;
 }
 
 .header-icons {
     margin-right: 20px;
     color: rgb(83, 83, 83) !important;
+    cursor: pointer;
 }
 
 
