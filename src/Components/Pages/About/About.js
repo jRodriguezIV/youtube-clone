@@ -12,7 +12,7 @@ export default function About() {
             <hr />
             <h3>Our Team</h3>
             <strong>Joseph Rodriguez</strong>
-            <p>Full Stack Software Engineer in Progress | Interests - ?, Tech - JavaScript, React...</p>
+            <p>Full Stack Software Engineer in Progress | Interests - Problem Solving, Leadership, Music, Tech - JavaScript, React, Firebase  </p>
             <div className='github-link'>
                 <a href='https://github.com/jRodriguezIV'>
                 <img className='gitLogo' src={gitLogo} alt='Github' /> 
