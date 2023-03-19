@@ -11,14 +11,12 @@ import { useState } from 'react';
 
 
 export default function Header ({searchState, setSearchState}) {
-    // const [searchState, setSearchState] = useState('');
-    //figure out why state intializes to 'kittens' on load...text changes with user  input
-    //still need to add onSubmit as per readme?
+
     const [searchInput, setSearchInput] = useState('');
 
     const handleChange = (e) => {
         e.preventDefault();
-        setSearchState(e.target.value);  //api calling this
+        setSearchState(e.target.value); 
     };
 
     const handleSubmit = (e) => {
