@@ -7,6 +7,7 @@ import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
 import MicIcon from '@mui/icons-material/Mic';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
@@ -30,7 +31,9 @@ export default function Header ({searchState, setSearchState}) {
         <div className='header-wrapper'>
         <div className='header-left'>
             <MenuIcon />
+            <Link to='/'>
             <img className='header-logo' src={ytLogo} alt='youtube-logo' />
+            </Link>
         </div>
         <div className='header-input'>
             <div className='header-middle'>
@@ -44,8 +47,10 @@ export default function Header ({searchState, setSearchState}) {
             <VideoCallIcon className='header-icons'/>
             <AppsIcon className='header-icons'/>
             <NotificationsIcon className='header-icons'/>
+            <Link to='/About'>
             <Avatar
-            src="https://yt3.ggpht.com/yti/AHXOFjWWkjVTtLxjm-A-O5oPCvWX7stmuGEH5o5lR1NN=s88-c-k-c0x00ffffff-no-rj-mo" alt="epps-yt"/>
+            src="http://uniformsandmore.in/wp-content/uploads/2018/02/abt.png" alt="about_icon"/>
+            </Link>
         </div>
         </div>
     )
