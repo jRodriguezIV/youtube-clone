@@ -2,14 +2,15 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import { db } from "../../../firebase";
-import { set, ref, onValue, remove } from "firebase/database"
+import { set, ref, onValue } from "firebase/database";
 import { uid } from "uid";
-import './Video.css'
+import "./Video.css";
+import Comment from "./Comment";
 
 export default function Video() {
   let [text, setText] = useState({ name: "", comment: "" });
   let [commentData, setCommentData] = useState([]);
- let  [keys , setKeys] = useState([])
+  let [keys, setKeys] = useState([]);
 
   let { id } = useParams();
 
@@ -20,97 +21,86 @@ export default function Video() {
     });
   }
 
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   setCommentData([...commentData, text]);
-  //   setText({ name: "", comment: "" })
-  // }
-
   //firebase
   //write
-  const writeToDatabase = (e) => {
-    const uuid = uid()
-    e.preventDefault()
+  function writeToDatabase(e) {
+    const uuid = uid();
+    e.preventDefault();
     set(ref(db, `/${id}/${uuid}`), {
       text,
       uuid,
-    })
-    setText({ name: "", comment: "" })
+    });
+    setText({ name: "", comment: "" });
   }
   //read
 
   useEffect(() => {
-    onValue(ref(db), snapshot =>{
-
-      const data = snapshot.val()
-      if(data !== null) {
-        setCommentData(data[id])
-        setKeys(Object.keys(data[id]))
+    onValue(ref(db), (snapshot) => {
+      const data = snapshot.val();
+      if (data !== null) {
+        setCommentData(data[id]);
+        setKeys(Object.keys(data[id]));
       }
-      if ( data === null) {
-        setCommentData([])
-        setKeys([])
+      if (data === null) {
+        setCommentData([]);
+        setKeys([]);
       }
-    })
-  }, [])
-  
-
-  //update
-
-  //delete
-  function handleDelete(el) {
-    remove(ref(db, `/${id}/${el}`))
-  }
+    });
+  }, [id]);
 
   return (
     <section className="video-wrapper">
       <YouTube videoId={`${id}`} />
 
-        <div className="comment-wrapper">
-            <hr className="hr1"/>
-      <form onSubmit={writeToDatabase} className="comment-form">
-        <label htmlFor="name" className="label-name">
-          Name
+      <div className="comment-wrapper">
+        <hr className="hr1" />
+        <form onSubmit={writeToDatabase} className="comment-form">
+          <label htmlFor="name" className="label-name">
+            Name
+            <br />
+            <input
+              id="name"
+              type="text"
+              value={text.name}
+              onChange={handleChange}
+              placeholder="Name..."
+            />
+          </label>
           <br />
-          <input
-            id="name"
-            type="text"
-            value={text.name}
-            onChange={handleChange}
-            placeholder="Name..."
-          />
-        </label>
-        <br />
-        <label className="label-comment" htmlFor="comment">
-          Comment
+          <label className="label-comment" htmlFor="comment">
+            Comment
+            <br />
+            <input
+              id="comment"
+              type="text"
+              value={text.comment}
+              onChange={handleChange}
+              placeholder="..."
+            />
+          </label>
           <br />
-          <input
-            id="comment"
-            type="text"
-            value={text.comment}
-            onChange={handleChange}
-            placeholder="..."
-          />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-        <hr className="hr2"/>
-      </form>
+          <button type="submit">Submit</button>
+          <hr className="hr2" />
+        </form>
 
         <ul className="comment-list">
-            {keys ? (keys.map((el, index) => {
-             console.log(el)
-                return(
-                     <li key={index}>
-                        <h4>{`${commentData[el].text.name}`}</h4>
-                        <p>{`${commentData[el].text.comment}`}</p>
-                        <button  className="delete-button" onClick={() => handleDelete(el)}>Delete</button>
-                     </li>
-                )
-            })) : ""
-            }
+          {keys
+            ? keys.map((el, index) => {
+                return (
+                  <Comment
+                    index={index}
+                    commentData={commentData}
+                    id={id}
+                    el={el}
+                    text={text}
+                    setText={setText}
+                    handleChange={handleChange}
+                  />
+                );
+              })
+            : ""}
         </ul>
-        </div>
+      </div>
     </section>
   );
 }

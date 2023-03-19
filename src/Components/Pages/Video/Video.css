@@ -51,6 +51,11 @@ hr {
   left: 0px;
 }
 
+.hr3 {
+  width: 30%;
+  margin-left: 0;
+}
+
 button {
   background-color: #377cfe;
   color: white;
@@ -59,6 +64,10 @@ button {
   padding: 4px;
 
   margin-top: 5px;
+}
+.individual-comment-wrapper > button {
+  margin: 0px 2px 0px 2px;
+  background-color: rgb(32, 103, 224);
 }
 input {
   width: 65%;
