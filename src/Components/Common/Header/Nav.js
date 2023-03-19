@@ -1,4 +1,6 @@
-export default function Nav {
+import { Link } from 'react-router-dom';
+
+export default function Nav() {
     return (
         <div>
             <nav className='nav-bar'>
@@ -11,3 +13,4 @@ export default function Nav {
         </div>
     )
 }
+

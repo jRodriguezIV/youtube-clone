@@ -18,12 +18,13 @@ export default function Header ({searchState, setSearchState}) {
 
     const handleChange = (e) => {
         e.preventDefault();
-        setSearchState(e.target.value);
-        setSearchInput();
+        setSearchState(e.target.value);  //api calling this
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setSearchInput(searchInput);
+        setSearchInput('');
     }
 
 
@@ -36,7 +37,7 @@ export default function Header ({searchState, setSearchState}) {
         <div className='header-input'>
             <div className='header-middle'>
             <input className='SearchInput' placeholder='Search' type='text' value={searchInput} onChange={handleChange} />
-            <SearchIcon className='header-searchBtn' onSubmit={handleSubmit} />
+            <SearchIcon onClick={handleSubmit} className='header-searchBtn' />
             </div>
         
             <MicIcon className='header-icons'/>
