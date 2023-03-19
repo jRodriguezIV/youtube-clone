@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { useState } from 'react';
+import { Box } from '@mui/material';
 import './App.css';
-import Footer from './Components/Common/Footer/Footer';
+
 import Header from './Components/Common/Header/Header';
 import Home from './Components/Pages/Home/Home';
 import About from './Components/Pages/About/About';
 import Nav from './Components/Common/Header/Nav';
-import { useState } from 'react';
 import Video from './Components/Pages/Video/Video';
 
 
@@ -16,13 +17,17 @@ const [searchState, setSearchState] = useState('kittens')
   return (
     <>
     <Router>
-    {/* <Nav /> */}
+      <Box sx={{ backgroundColor: '#000' }}>
+      <Nav />
+      </Box>
     <Header searchState={searchState} setSearchState={setSearchState}/>
+    
       <Routes>
         <Route path='/' element={<Home setSearchState={setSearchState} searchState={searchState}/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/:id' element={<Video/>}  />
       </Routes>
+      
       {/* <Footer /> */}
     </Router>
     </>

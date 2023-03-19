@@ -3,14 +3,17 @@ import { Stack } from '@mui/material';
 
 export default function Nav() {
     return (
-        <div>
-            <nav className='nav-bar'>
-                <img src={ require('./ytLogo.png') } alt='youtube-logo' />
-                <ul>
-                    <Link to='/'>Home</Link>
-                    <Link to="/About">About</Link>
-                </ul>
-            </nav>
+        <div className='nav'>
+        <Stack 
+            direction='row' 
+            alignItems='center' 
+            p={2}  
+            sx={{ position: 'sticky', background: '#000', top: 0, justifyContent: 'space-between' }} >
+            
+            {/* <img src={ require('./ytLogo.png') } alt='youtube-logo' /> */}
+            <Link to='/' style={{ display: 'flex', alignItems: 'center'}}>Home</Link>
+            <Link to="/About" style={{ display: 'flex', alignItems: 'center'}}>About</Link>
+            </Stack>
         </div>
     )
 }
