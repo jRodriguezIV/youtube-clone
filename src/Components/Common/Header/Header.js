@@ -16,12 +16,12 @@ export default function Header ({searchState, setSearchState}) {
 
     const handleChange = (e) => {
         e.preventDefault();
-        setSearchState(e.target.value); 
+        setSearchInput(e.target.value); 
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSearchInput(searchInput);
+        setSearchState(searchInput);
         setSearchInput('');
     }
 
