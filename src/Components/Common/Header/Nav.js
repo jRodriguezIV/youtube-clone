@@ -1,4 +1,3 @@
-// import { useState, useEffect } from 'react';
 import { Divider, Stack } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
@@ -17,7 +16,7 @@ export default function Nav() {
             direction='row'
             justifyContent='center'
             alignItems='center'
-            // divider={<Divider orientation='vertical' flexItem />}
+            divider={<Divider orientation='vertical' flexItem />}
             spacing={2}
             >
             <HomeIcon /> <p>Home</p>
