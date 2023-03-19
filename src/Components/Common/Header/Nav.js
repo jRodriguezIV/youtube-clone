@@ -1,21 +1,33 @@
-import { Link } from 'react-router-dom';
-import { Stack } from '@mui/material';
-import ytLogo from '../Header/ytLogo.png';
+// import { useState, useEffect } from 'react';
+import { Divider, Stack } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
+import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
+import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
+import HistoryIcon from '@mui/icons-material/History';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import WatchLaterIcon from '@mui/icons-material/WatchLater';
+
+import './Nav.css';
 
 export default function Nav() {
     return (
         <div className='nav'>
-        {/* <Stack 
-            direction='row' 
-            alignItems='center' 
-            p={2}  
-            sx={{ position: 'sticky', background: '#000', top: 0, justifyContent: 'space-between' }} >
-            
-            <Link to="/About" style={{ display: 'flex', alignItems: 'center'}}>About
-            <Link to='/'>
-            <img src={ytLogo} alt="logo" height={45} />
-            </Link>
-            </Stack> */}
+        <Stack 
+            direction='row'
+            justifyContent='center'
+            alignItems='center'
+            // divider={<Divider orientation='vertical' flexItem />}
+            spacing={2}
+            >
+            <HomeIcon /> <p>Home</p>
+            <WhatshotIcon /> <p>Trending</p>
+            <SubscriptionsIcon /> <p>Subscription</p>
+            <LibraryAddIcon /> <p>Library</p>
+            <HistoryIcon /> <p>History</p>
+            <OndemandVideoIcon /> <p>Your Videos</p>
+            <WatchLaterIcon /> <p>Watch Later</p>
+          </Stack>
         </div>
     )
 }

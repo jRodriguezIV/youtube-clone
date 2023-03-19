@@ -1,3 +1,7 @@
-/* .nav {
-    height: 200px;
-} */
+.nav {
+    display: flex;
+}
+
+p {
+    font-size: 12px;
+}
