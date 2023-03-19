@@ -7,6 +7,9 @@ import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
 import MicIcon from '@mui/icons-material/Mic';
+
+import { Stack } from '@mui/material';
+
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -37,8 +40,8 @@ export default function Header ({searchState, setSearchState}) {
         </div>
         <div className='header-input'>
             <div className='header-middle'>
-            <input className='SearchInput' placeholder='Search' type='text' value={searchInput} onChange={handleChange} />
-            <SearchIcon onClick={handleSubmit} className='header-searchBtn' />
+            <input className='SearchInput' placeholder='Search...' type='text' value={searchInput} onChange={handleChange} />
+            <SearchIcon type='submit' className='header-searchBtn' onClick={handleSubmit} sx={{color: 'red'}} />
             </div>
         
             <MicIcon className='header-icons'/>
@@ -50,7 +53,7 @@ export default function Header ({searchState, setSearchState}) {
             <Link to='/About'>
             <Avatar
             src="http://uniformsandmore.in/wp-content/uploads/2018/02/abt.png" alt="about_icon"/>
-            </Link>
+            </Link>    
         </div>
         </div>
     )

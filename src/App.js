@@ -17,9 +17,7 @@ const [searchState, setSearchState] = useState('kittens')
   return (
     <>
     <Router>
-      <Box sx={{ backgroundColor: '#000' }}>
       <Nav />
-      </Box>
     <Header searchState={searchState} setSearchState={setSearchState}/>
     
       <Routes>
