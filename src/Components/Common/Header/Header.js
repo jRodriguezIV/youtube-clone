@@ -11,18 +11,18 @@ import { useState } from 'react';
 
 
 export default function Header ({searchState, setSearchState}) {
-    // const [searchState, setSearchState] = useState('');
-    //figure out why state intializes to 'kittens' on load...text changes with user  input
-    //still need to add onSubmit as per readme?
+
     const [searchInput, setSearchInput] = useState('');
 
     const handleChange = (e) => {
         e.preventDefault();
-        setSearchInput(e.target.value);
+        setSearchState(e.target.value); 
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setSearchInput(searchInput);
+        setSearchInput('');
     }
 
 
@@ -35,7 +35,7 @@ export default function Header ({searchState, setSearchState}) {
         <div className='header-input'>
             <div className='header-middle'>
             <input className='SearchInput' placeholder='Search' type='text' value={searchInput} onChange={handleChange} />
-            <SearchIcon className='header-searchBtn' onSubmit={handleSubmit} />
+            <SearchIcon onClick={handleSubmit} className='header-searchBtn' />
             </div>
         
             <MicIcon className='header-icons'/>
