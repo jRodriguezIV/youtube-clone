@@ -27,27 +27,15 @@
     align-items: center;
     width: 45%;
     border: 1px solid lightgrey;
+    border-radius: 20px;
     flex: 1;
     margin-right: 10px;
 }
 
-/* .SearchInput {
-    margin-top: 5px 0px;
-    width: 300px;
-    height: 200px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    overflow: hidden;
-    overflow-y: auto;
-} */
-
-/* .header-middle::-webkit-scrollbar {
-    display: none;
-} */
-
 .SearchInput {
     flex: 1;
     border: none;
+    border-radius: 10px 0 0 10px;
     height: 25px !important;
     padding-left: 10px;
     font-size: 16px;
@@ -72,6 +60,7 @@
     width: 50px !important;
     background-color: #fafafa;
     border-left: 1px solid lightgrey;
+    border-radius: 40px 0 0 40px;
     cursor: pointer;
     color: gray;
 }
@@ -81,11 +70,3 @@
     color: rgb(83, 83, 83) !important;
     cursor: pointer;
 }
-
-
-/* * lets use material ui icons looks nice - for the menu button, upload, and search btn 
- installed material ui in event we want to use for styling */
-
-/* 3 diff sections of header. left --> menu button and youtube logo
-/* middle --> search bar and microphone icon
-/* /* right --> 3 icons w/ the Avatar icon  */
