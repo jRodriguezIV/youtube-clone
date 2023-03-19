@@ -7,9 +7,6 @@ import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
 import MicIcon from '@mui/icons-material/Mic';
-
-import { Stack } from '@mui/material';
-
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 

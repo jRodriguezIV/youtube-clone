@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
-import { Box } from '@mui/material';
 import './App.css';
 
 import Header from './Components/Common/Header/Header';
@@ -17,15 +16,13 @@ const [searchState, setSearchState] = useState('kittens')
   return (
     <>
     <Router>
+      <Header searchState={searchState} setSearchState={setSearchState}/>
       <Nav />
-    <Header searchState={searchState} setSearchState={setSearchState}/>
-    
-      <Routes>
+    <Routes>
         <Route path='/' element={<Home setSearchState={setSearchState} searchState={searchState}/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/:id' element={<Video/>}  />
-      </Routes>
-      
+    </Routes>
       {/* <Footer /> */}
     </Router>
     </>
