@@ -12,7 +12,7 @@ import ErrorMessage from "./Components/Common/Error/ErrorMessage";
 import { searchByTerm } from "./api/fetch";
 
 function App() {
-  const [searchState, setSearchState] = useState("kittens");
+  const [searchState, setSearchState] = useState("dimloons");
   const [errorState, setErrorState] = useState(false);
   const [videoList, setVideoList] = useState([]);
 
@@ -58,7 +58,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/:id" element={<Video />} />
         </Routes>
-        {/* <Footer /> */}
       </Router>
     </>
   );

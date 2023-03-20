@@ -47,7 +47,7 @@ export default function Header ({searchState, setSearchState}) {
             <VideoCallIcon className='header-icons'/>
             <AppsIcon className='header-icons'/>
             <NotificationsIcon className='header-icons'/>
-            <Link to='/About'>
+            <Link to='/about'>
             <Avatar
             src="http://uniformsandmore.in/wp-content/uploads/2018/02/abt.png" alt="about_icon"/>
             </Link>    
