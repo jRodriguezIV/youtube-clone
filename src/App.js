@@ -12,7 +12,7 @@ import ErrorMessage from "./Components/Common/Error/ErrorMessage";
 import { searchByTerm } from "./api/fetch";
 
 function App() {
-  const [searchState, setSearchState] = useState("dimloons");
+  const [searchState, setSearchState] = useState("kittens");
   const [errorState, setErrorState] = useState(false);
   const [videoList, setVideoList] = useState([]);
 
