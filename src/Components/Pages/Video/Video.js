@@ -37,16 +37,17 @@ export default function Video() {
   useEffect(() => {
     onValue(ref(db), (snapshot) => {
       const data = snapshot.val();
-      if (data !== null) {
+      if (data !== null && data[id]) {
+        console.log(data)
         setCommentData(data[id]);
         setKeys(Object.keys(data[id]));
       }
-      if (data === null) {
+      else {
         setCommentData([]);
         setKeys([]);
       }
     });
-  }, [id]);
+  }, []);
 
   return (
     <section className="video-wrapper">

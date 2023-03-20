@@ -1,39 +1,33 @@
-import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
-import { searchByTerm } from "../../../api/fetch";
+
+
 
 import "./Home.css";
 
-export default function Home({ searchState }) {
-  const [videoList, setVideoList] = useState([]);
-
-  useEffect(() => {
-    searchByTerm(searchState)
-      .then((response) => {
-        setVideoList(response.items);
-      })
-      .catch((error) => console.log(error));
-  }, [searchState]);
+export default function Home({ videoList }) {
+  
 
   return (
+  <>
     <div className="thumbnails-wrapper">
-      {videoList.length !== 0
-        ? videoList.map((video, index) => {
-
-            return (
-              <div key={index} className="thumbnail">
-                <Link to={`/${video.id.videoId}`}>
-                  <img
-                    style={{ width: 314, heigth: 240 }}
-                    src={video.snippet.thumbnails.medium.url}
-                    alt={"Youtube Thumbnail"}
-                  />
-                </Link>
-                <h4>{video.snippet.title}</h4>
-              </div>
-            );
-          })
-        : ""}
+          {videoList && videoList.length !== undefined
+            ? videoList.map((video, index) => {
+                return (
+                  <div key={index} className="thumbnail">
+                    <Link to={`/${video.id.videoId}`}>
+                      <img
+                        style={{ width: 314, heigth: 240 }}
+                        src={video.snippet.thumbnails.medium.url}
+                        alt={"Youtube Thumbnail"}
+                      />
+                    </Link>
+                    <h4>{video.snippet.title}</h4>
+                  </div>
+                );
+              })
+            : ""}
     </div>
+    </>
   );
 }
