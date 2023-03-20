@@ -38,7 +38,6 @@ export default function Video() {
     onValue(ref(db), (snapshot) => {
       const data = snapshot.val();
       if (data !== null && data[id]) {
-        console.log(data)
         setCommentData(data[id]);
         setKeys(Object.keys(data[id]));
       }
