@@ -1,10 +1,16 @@
 import "./ErrorMessage.css";
 
-export default function ErrorMessage({ setErrorState, setSearchState }) {
+export default function ErrorMessage({ setErrorState, errorState, setSearchState }) {
   function handleClose() {
     setErrorState(false);
     setSearchState("kittens");
   }
+
+    if(errorState === true) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
 
   return (
     <div className="modal">

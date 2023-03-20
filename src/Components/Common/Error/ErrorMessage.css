@@ -28,3 +28,7 @@
 body {
     margin: 0px;
 }
+
+.active-modal{
+    overflow-y: hidden
+}

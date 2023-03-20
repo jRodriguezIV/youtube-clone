@@ -39,7 +39,7 @@ function App() {
             <Nav />
           </>
         ) : (
-          <ErrorMessage setErrorState={setErrorState} setSearchState={setSearchState}  />
+          <ErrorMessage errorState={errorState} setErrorState={setErrorState} setSearchState={setSearchState}  />
         )}
 
         <Routes>
