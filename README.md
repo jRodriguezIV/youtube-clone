@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a1b97b5e-e995-42b8-88a1-aacfdc19f34a/deploy-status)](https://app.netlify.com/sites/youtube-clone-504/deploys)
 # Youtube-Clone
 
 Welcome to our Youtube Clone! 😃
