@@ -8,7 +8,7 @@ Welcome to our Youtube Clone! 😃
 | Dev Team |
 | :--------------:
 | [**Joseph R.**](https://github.com/jRodriguezIV)|
-| [**Shareeka E.**](https://github.com/shaketastic)|
+| [**Shareeka E.**](https://lebouquet.netlify.app/)|
 
 ## Objectives
 
